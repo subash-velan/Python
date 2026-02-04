@@ -1,0 +1,42 @@
+Introduction:
+-------------
+
+What is Python?
+Python is a high level, interpreted, dynamically typed programming language known for its simplicity, readability, and wide applicability across software, data, 
+and automation domains.
+
+History:
+--------
+Python was conceived in the late 1980s by Guido van Rossum, a Dutch software engineer working at the Centrum Wiskunde & Informatica (CWI) in the Netherlands. 
+Development began in December 1989 as a successor to the ABC language, with the goal of creating a language that emphasized simplicity, readability, and extensibility
+
+Python was first publicly released in February 1991 (version 0.9.1). Even in its earliest form, Python included high‑level data structures such as 
+  lists and dictionaries, 
+  exception handling, 
+  functions and 
+  a modular architecture, 
+reflecting its focus on developer productivity from the beginning
+
+The name “Python” was inspired by the BBC television show Monty Python’s Flying Circus, not the snake, highlighting the creator’s intention to keep the language enjoyable and approachable
+
+Versions:
+---------
+
+1991 – Python 0.9.1
+First public release by Guido van Rossum.
+
+1994 – Python 1.0
+Introduced core features like modules, exceptions, and functional tools.
+
+2000 – Python 2.0
+Added list comprehensions, garbage collection, and better memory management.
+
+2008 – Python 3.0
+Major redesign (not backward compatible).
+Fixed Unicode handling and cleaned legacy issues.
+
+2020 – Python 2 End of Life
+Python 2 officially retired; Python 3 becomes the standard.
+
+2015–Present – Modern Python (3.x)
+Type hints, async/await, performance improvements, better tooling.
