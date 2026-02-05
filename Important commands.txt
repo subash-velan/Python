@@ -1,0 +1,69 @@
+1. Python script run:
+
+	Common	   :  $ python filename.py
+	Unix/MacOS :  $ python3 filename.py
+
+2. Version Check:
+	Windows    :  $ python --version
+	Unix/MacOS :  $ python3 --version
+
+3. Python specific package installation:
+	Common     :  $ pip install "package name"
+	Windows    :  $ python -m pip install "package name"
+	Unix/MacOS :  $ python3 -m pip install "package name"
+
+4. Python requirements.txt package installation:
+	Common     :  $ pip install -r requirements.txt
+	Windows    :  $ python -m pip install -r requirements.txt
+	Unix/MacOS :  $ python3 -m pip install -r requirements.txt
+
+5. Create Virtual Environment:
+	Common	   :  $ python -m venv "envi. name"
+	Windows    :  $ python -m venv "envi. name"
+	Unix/MacOS :  $ python3 -m venv "envi. name"
+	
+6.1. Activate Virtual environment:
+	Windows    :  $ envi_name\Scripts\activate
+	Unix/MacOS :  $ source envi_name/bin/activate
+	
+6.2. Deactivate Virtual environment
+
+	$ deactivate
+
+7. Save installed dependencies:
+
+	$ pip freeze > requirements.txt
+
+8. Run module:
+
+	$ python -m module_name
+	
+9. pip list
+
+	$ python -m pip list
+
+===============================================================================
+			FAST-API
+===============================================================================
+
+1. Run FAST-API project
+	
+	$ uvicorn main:app
+	
+	$ uvicorn main:app --reload
+	
+	
+	Note: Here, main is the project's main file to run the project
+	
+2. Run project on custom host and port
+
+	$ uvicorn main:app --host 0.0.0.0 --port 8000
+	
+	Note: Used in Docker, Cloud, Kubernetes
+	
+
+
+	
+
+
+	
