@@ -1,0 +1,76 @@
+Core Python Learning Roadmap (Basics & Advanced)
+================================================
+Target Audience: Senior Engineers / Tech Leads 
+Focus: Production-ready Python, architecture, performance, and mentoring
+================================================
+Module 1: Python Foundations (Basics)
+- Python installation, venv, pip, pyenv, project structure
+- Python syntax, indentation, keywords, comments
+- Data types: int, float, bool, str, bytes, None
+- Collections: list, tuple, set, dict and comprehensions
+- Control flow: if/else, for, while, break/continue
+- Functions: parameters, *args, **kwargs, lambda, scope
+- Modules & packages, imports, __main__
+- File handling, pathlib, JSON, CSV
+- Standard library overview (os, sys, datetime, logging)
+Module 2: Object-Oriented Python
+- Classes, objects, attributes, methods
+- __init__ and special (dunder) methods
+- Inheritance, composition, method overriding
+- Dataclasses and immutability
+- Abstract Base Classes (abc)
+- Properties and encapsulation
+- Iterators, generators, yield
+- Context managers (with statement)
+Module 3: Exception Handling & Code Quality
+- Built-in and custom exceptions
+- try/except/else/finally best practices
+- Assertions and defensive programming
+- PEP 8, clean code principles
+- Logging levels and configuration
+- Debugging techniques
+Module 4: Testing & Typing
+- Unit testing with pytest
+- Fixtures, parametrization
+- Mocking and patching
+- Code coverage
+- Type hints and typing module
+- Static type checking with mypy/pyright
+Module 5: Packaging & Dependency Management
+- pyproject.toml
+- setuptools / poetry basics
+- Versioning and semantic versioning
+- Virtual environments
+- Building and distributing packages
+- CLI entry points
+Module 6: Concurrency & Parallelism
+- GIL overview
+- Multithreading and thread safety
+- Multiprocessing and CPU-bound tasks
+- concurrent.futures
+- Asyncio, async/await
+- Async I/O patterns
+Module 7: Performance & Memory Management
+- Profiling with cProfile
+- timeit and benchmarking
+- Memory management and garbage collection
+- Generators vs lists
+- Caching with functools.lru_cache
+- Identifying and fixing bottlenecks
+Module 8: Advanced Python Concepts
+- Decorators and closures
+- Functional programming tools
+- Design patterns in Python
+- Metaprogramming basics
+- Pythonic best practices
+Module 9: Security, Reliability & DevOps
+- Secure configuration and secrets handling
+- Dependency vulnerability scanning
+- Structured logging
+- CI/CD integration
+- Observability concepts
+Module 10: Capstone (Tech Lead Level)
+- Design and implement a production-grade Python module
+- Apply testing, typing, packaging, and profiling
+- Code review and refactoring exercise
+- Documentation and knowledge sharing
