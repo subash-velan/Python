@@ -7,7 +7,8 @@ Module 1: Python Foundations (Basics)
 - Python Introduction
 - Python installation
 - Python features
-- Python compilers & Interpreter (PVM & Execution of Python Program, Memory management - Heap, Garbage collection)
+- Python Compilers & Interpreter (Execution of Python Program - PVM)
+- Python Memory management - Heap, Garbage collection
 - venv, pip, pyenv, project structure
 - Python syntax, indentation, keywords, comments
 - Data types: int, float, bool, str, bytes, None
