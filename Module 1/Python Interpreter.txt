@@ -1,0 +1,57 @@
+Execution of Python Programs:
+
+  Python is often described as an interpreted language, but internally it uses both a compiler and an interpreter. Understanding this dual mechanism is critical to understanding Python’s performance, portability, and behavior
+
+Overview: How Python Executes Code:
+----------------------------------
+Python execution happens in two major phases:
+
+  1. Compilation Phase - Source code is converted into byte code
+  2. Interpretation Phase - Byte Code is executed by Python Virtual Machine (PVM)
+
+  High‑Level Flow:
+
+    Source Code (.py)
+        ↓
+    Python Compiler
+        ↓
+    Bytecode (.pyc)
+        ↓
+    Python Virtual Machine (Interpreter)
+        ↓
+    Output
+
+1. Python Compiler (Compilation Phase)
+  The python compiler is an internal components of Python runtime that;
+
+    i. Reads .py source code
+    ii. Checks the syntax
+    iii. Converts the source code into byte code
+  This compilation is automatic and invisible to user
+
+  1.1. What is Bytecode?
+    i. Byte code is a low-level, platform independant instruction set
+    ii. It is not a machine level language
+    iii. Designed specially for Python Virtual Machine (PVM)
+    
+    Example Bytecode:
+      LOAD_CONST
+      STORE_NAME
+      BINARY_ADD
+      CALL_FUNCTION
+  
+  1.2. .pyc files and __pycache__ folder
+    i. Compiled bytecode is stored as .pyc file
+    ii. Located inside __pycache__ folder
+    iii. Bytecode is reusable if source file has not changed
+  Benefits: Faster startup and subsequence executions
+
+  Python delays most decisions to runtime, not compile time
+
+2. Python Interpreter (Execution Phase):
+
+  
+
+
+  
+
