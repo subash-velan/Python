@@ -49,6 +49,26 @@ Python execution happens in two major phases:
   Python delays most decisions to runtime, not compile time
 
 2. Python Interpreter (Execution Phase):
+  2.1. What is Python Virtual Machine (PVM)?
+    Python Virtual Machine(PVM) is crucial components of Python runtime environment. It executes Python bytecode, which is generated from Python source code or intermediate      representations like Abstraction Syntax Trees (ASTs). It works as stack-based virtual machine (not registered-based like CPU)
+
+    Python virtual machine, often referred to as the Python interpreter is responsible for executing Python code. It serves as the abstraction layer between the Python code      and the underlying hadware, providing a consistent environment for running Python prorgrams across different platforms. The PVM is implemented in CPython
+
+  2.2. Architecture of the Python Virtual Machine:
+
+    1. Bytecode Generation: 
+        Before execution, Python source code is compiled into bytecode, this bytecode is low-level, platform independent, intermediate representation of python source code
+    2. Interpreter Loop:
+        Heart of the PVM is the interpreter loop, It fetches the bytecode instruction, decodes them, executes them sequentially.
+    3. Python Object Model:
+        The Python Virtual Machine maintains the Python object model to represents data types such as string,integers,lists and custom objects. It manages the creation,manipulation and destruction of these objects during execution.
+    4. Memory Management:
+        The PVM handles the memory allocation and garbage collection to manage the memory used by Python objects dynamically
+
+  2.3. Bytecode Execution Process:
+
+    
+  
 
   
 
