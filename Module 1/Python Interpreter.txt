@@ -65,10 +65,41 @@ Python execution happens in two major phases:
     4. Memory Management:
         The PVM handles the memory allocation and garbage collection to manage the memory used by Python objects dynamically
 
+        Ref Counting:
+          Every Python object stores a reference count.
+          Every push/pop/update adjusts this automatically.
+        Garbage Collection:
+          For cycles, Python uses a cyclic GC periodically.
+        Global Interpreter Lock (GIL):
+          Ensures:
+            Only one thread executes Python bytecode at a time
+          Effects:
+            Greatly simplifies memory safety
+            Limits CPU-bound multithreading
+            Threading is fine for I/O-bound tasks
+
   2.3. Bytecode Execution Process:
 
-    
-  
+    COMPLETE BYTECODE EXECUTION FLOW (Visual)
+
+      Bytecode (.pyc)
+            ↓
+     Load Code Object
+            ↓
+   Create Execution Frame
+            ↓
+    ┌─────────────────────┐
+    │ Bytecode Eval Loop  │
+    │                     │
+    │  FETCH opcode       │
+    │  DECODE opcode      │
+    │  EXECUTE C routine  │
+    │  Update IP & Stack  │
+    └─────────────────────┘
+            ↓
+      RETURN_VALUE
+            ↓
+         Output
 
   
 
