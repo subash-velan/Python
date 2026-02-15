@@ -1,0 +1,76 @@
+Fundamentals of Python Memory Management:
+  Memory management refers to the process of allocating and deallocating memory to programs while it runs.
+  Python handles memory management automatically using mechanisms like reference counting and garbage collection, which means programmers not required to handle manually while it is writting
+
+Stack and Heap:
+  In Python, like many programming languages, it uses two main memory areas:
+  I. Stack Memory
+  II. Heap Memory
+
+  I. Stack Memory:
+    Stack memory is where methods/function calls and reference variables(memory address) are stored
+      1. Whenever a function is called, Python adds it onto call stack (stack memory)
+      2. Inside this function, all local variables (like numbers, strings, temporary references) are stored in stack memory
+      3. Once the function finishes executing, stack memory used by it is automatically freed
+    In simple terms, stack memory is temporary and is only alive until the function call is running
+    Example:
+    def func(): 
+        # These variables are created in stack memory
+        a = 20
+        b = [] 
+        c = ""
+    Here a, b and c are stored in stack memory when function func() is called. As soon as function ends, this memory is released automatically.
+  
+  II. Heap Memory:
+    Heap memory is where actual objects or values are stored, The heap is a more dynamic memory area where objects are allocated
+      1. When a variable is created, Python allocates its object/value in heap memory
+      2. Stack memory is store only its reference(points) to this objects
+      3. Objects in heap can be shared among multiple functions or exists even after the function has finished executing
+    In simple terms: Heap memory is like a storage area where all values/objects live and stack memory just keeps directions (references) to them.
+    Example:
+    # This list of 10 integers is allocated in heap memory
+    a = [0] * 10
+    Explanation: Here, list [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] is stored in heap memory. The variable a in stack memory just holds a reference pointing to this list in the heap
+
+
+Reference Counting:
+
+  Python uses reference counting as its primary memory management mechanism. Each object in Python has a reference count, which is the number of references (names) that point to the object. When an object's reference count reaches zero, the object is immediately deallocated, and the memory is reclaimed.
+
+  a = [1, 2, 3]  # The list object has a reference count of 1 (because 'a' refers to it)
+  b = a  # Now the reference count of the list object is 2 (both 'a' and 'b' refer to it)
+  del a  # The reference count of the list object becomes 1 again
+  del b  # The reference count reaches 0, and the list object is deallocated
+
+Garbage Collection:
+
+  In addition to reference counting, Python has a garbage collector. The garbage collector is responsible for finding and reclaiming memory occupied by objects that are no longer reachable,   even if their reference count is not zero. This is useful in cases where circular references occur.
+
+  class A:
+      def __init__(self):
+          self.b = B(self)
+  
+  class B:
+      def __init__(self, a):
+          self.a = a
+  
+  a = A()
+  # Here, there is a circular reference between A and B objects.
+  # Without garbage collection, these objects would not be deallocated.
+  The garbage collector runs periodically to break these circular references and free the memory.
+
+Variable Assignment and Memory Allocation:
+
+  I. Immutable Objects(Non-changeable)
+  When you assign a value to a variable in Python, memory is allocated for the object. For immutable objects like integers and strings, Python caches some common values to save memory.
+  
+  a = 10
+  b = 10
+  print(a is b)  # Output: True, because Python caches small integers
+
+  II. Mutable Objects(Changeable)
+  For mutable objects like lists and dictionaries, new memory is allocated each time you create a new instance.
+  list1 = [1, 2, 3]
+  list2 = [1, 2, 3]
+  print(list1 is list2)  # Output: False
+
