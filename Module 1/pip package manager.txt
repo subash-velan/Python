@@ -1,0 +1,24 @@
+pip:
+
+pip stands for Pip install Packages
+pip is the standard tool to install and manage Python libraries.
+It makes sure your project gets the exact packages and versions it needs to run properly.
+
+pip downloads packages from:
+
+1. PyPI (Python Package Index — the main public repository)
+2. Private/internal package registries
+3. Local wheels or source directories
+
+constrainst.txt:
+
+A constraints.txt file assigns version limits to dependencies without specifying what should be installed.
+It’s mainly used for enforcing organization-wide dependency versions, resolving conflicts, and applying security fixes across multiple projects.
+Developers install normally using pip install -r requirements.txt -c constraints.txt, and pip ensures all direct and transitive dependencies stay within those constraints.
+This provides reproducibility, consistency across microservices, and centralized governance.
+
+requirements.txt:
+
+requirements.txt is a file that lists all the dependencies required by a Python project, usually with specific version pins.
+pip uses it to perform reproducible installations using pip install -r requirements.txt
+It ensure dependencies are pinned, lockfiles are generated with pip-tools, environment-specific requirements are separated, and constraints files are used for organization-wide governance and security
