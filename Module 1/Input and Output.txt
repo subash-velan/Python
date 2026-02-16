@@ -1,0 +1,48 @@
+Input and Output in Python:
+
+With the print() function, we can display output in various formats, while the input() function enables interaction with users by gathering input during program execution
+
+print() - It is used to display outputs to the user
+input() - It is used to interact with users to get the user input
+
+Taking input in Python:
+
+Python's input() function is used to take user input. By default, it returns the user input in the form of a string
+
+Example:
+
+name = input("Enter your name: ")
+print("Hello,", name, "! Welcome!")
+
+Output:
+Enter your name: GeeksforGeeks
+Hello, GeeksforGeeks ! Welcome!
+
+Printing Output using print() in Python:
+
+At its core, printing output in Python is straightforward, thanks to the print() function. This function allows us to display text, variables and expressions on the console. Let's begin with the basic usage of the print() function:
+
+In this example, "Hello, World!" is a string literal enclosed within double quotes. When executed, this statement will output the text to the console.
+
+print("Hello, World!")
+
+Output
+Hello, World!
+
+Printing Variables
+We can use the print() function to print single and multiple variables. We can print multiple variables by separating them with commas. 
+
+Example:
+
+s = "Brad"
+print(s)
+​
+s = "Anjelina"
+age = 25
+city = "New York"
+print(s, age, city)
+
+Output
+Brad
+Anjelina 25 New York
+
