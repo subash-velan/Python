@@ -5,10 +5,10 @@ Focus: Production-ready Python, architecture, performance, and mentoring
 ================================================
 Module 1: Python Foundations (Basics)
 - Python Introduction
-- Python installation
-- Python features
+- Python Installation
+- Python Features
 - Python Compilers & Interpreter (Execution of Python Program - PVM)
-- Python Memory management - Heap, Garbage collection
+- Python Memory management - Stack,Heap,Reference Counting,Garbage collection
 - venv, pip, pyenv, project structure
 - Python syntax, indentation, keywords, comments
 - Data types: int, float, bool, str, bytes, None
