@@ -1,0 +1,18 @@
+What is pyenv?
+  pyenv is a Python version manager — a tool that lets you install, manage, and switch between multiple Python versions on the same machine without touching your system Python.
+You can think of pyenv as the controller for your Python interpreters.
+
+Usage:
+1. Install multiple versions:
+  > pyenv install 3.10.12
+  > pyenv install 3.11.7
+
+2. Switch versions globally:
+  > pyenv global 3.13.5
+3. Set Python version per project:
+  > pyenv local 3.11.7
+4. Temporarily use a version for one shell:
+  > pyenv shell 3.9.18
+
+pyenv => chooses Python version
+venv => isolates packages for that project
