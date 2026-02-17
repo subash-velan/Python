@@ -1,0 +1,55 @@
+Local Variables:
+
+Local variables are created inside a function and exist only during its execution. They cannot be accessed from outside the function.
+
+Example 1: 
+In this code, we are creating and accessing a local variable inside a function.
+
+def greet():
+    msg = "Hello from inside the function!"
+    print(msg)
+​
+greet()
+
+Output:
+Hello from inside the function!
+Explanation: We define greet() with a local variable msg and print it. Since msg exists only during the function's execution, it's accessed within the function. Calling greet() displays the message.
+
+Example 2: 
+In this example, we are creating a local variable inside a function and then trying to access it outside the function, which causes an error.
+
+def greet():
+    msg = "Hello!"
+    print("Inside function:", msg)
+
+greet()
+print("Outside function:", msg)
+Output
+
+Traceback (most recent call last):
+  File "/home/guest/sandbox/Solution.py", line 6, in <module>
+    print("Outside function:", msg)
+NameError: name 'msg' is not defined
+
+Explanation: msg is a local variable inside greet() and can only be accessed there. Printing it outside causes an error because it doesn't exist globally.
+
+Global Variables:
+
+Global variables are declared outside all functions and can be accessed anywhere in the program, including inside functions.
+
+In this example, we are creating a global variable and then accessing it both inside and outside a function.
+
+msg = "Python is awesome!"
+​
+def display():
+    print("Inside function:", msg)
+​
+display()
+print("Outside function:", msg)
+
+Output
+Inside function: Python is awesome!
+Outside function: Python is awesome!
+Explanation: msg is a global variable accessible both inside and outside the display() function. Calling display() prints the global msg and printing msg outside the function works as expected.
+
+Note: If a variable is not found inside a function (local scope), Python automatically looks for it in global scope. However, if a local variable has same name as a global one, it will shadow global variable inside that function.
