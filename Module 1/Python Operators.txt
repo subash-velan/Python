@@ -1,0 +1,151 @@
+Python Operators:
+
+In Python programming, Operators in general are used to perform operations on values and variables.
+
+Operators: Special symbols like -, + , * , /, etc.
+Operands: Value on which the operator is applied.
+
+Types of Operators:
+  1. Arithmetic Operators
+  2. Relational/Comparision Operators
+  3. Logical Operators
+  4. Bitwise Operators
+  5. Assignment Operators
+  6. Identity Operators
+  7. Membership Operators
+
+1. Arithmetic Operators:
+  Python Arithmetic operators are used to perform basic mathematical operations like addition, subtraction, multiplication and division.
+  In Python 3.x the result of division is a floating-point while in Python 2.x division of 2 integers was an integer. To obtain an integer result in Python 3.x floored (// integer) is used.
+  Example: 
+  a = 10
+  b = 20
+  result = a + b
+
++ -> Operators
+a and b -> Operands
+
+2. Comparison/Relational Operators:
+  In Python, Comparison (or Relational) operators compares values. It either returns True or False according to the condition.
+  Example:
+  a = 10
+  b = 20
+  print(a > 20)
+
+  Output:
+  False
+
+3. Logical Operators:
+  Python Logical operators perform Logical AND, Logical OR and Logical NOT operations. It is used to combine conditional statements.
+
+  The precedence of Logical Operators in Python is as follows:
+  
+  I. not
+  II. and
+  III. or
+    
+  a = True
+  b = False
+  print(a and b)
+  print(a or b)
+  print(not a)
+  
+  Output:
+  False
+  True
+  False
+
+4. Bitwise Operators:
+
+  Python Bitwise operators act on bits and perform bit-by-bit operations. These are used to operate on binary numbers.
+
+  Bitwise Operators in Python are as follows:
+  
+  Bitwise NOT
+  Bitwise Shift
+  Bitwise AND
+  Bitwise XOR
+  Bitwise OR
+  
+  
+  
+  a = 10
+  b = 4
+  ​
+  print(a & b)
+  print(a | b)
+  print(~a)
+  print(a ^ b)
+  print(a >> 2)
+  print(a << 2)
+  
+  Output
+  0
+  14
+  -11
+  14
+  2
+  40
+
+5. Assignment Operators
+  Python Assignment operators are used to assign values to the variables. This operator is used to assign the value of the right side of the expression to the left side operand.
+  
+  Example:
+  a = 10
+  b = a
+
+6. Identity Operators:
+  In Python, is and is not are the identity operators both are used to check if two values are located on the same part of the memory. Two variables that are equal do not    imply that they are identical. 
+  
+  is      -   True if the operands are identical 
+  is not  -   True if the operands are not identical 
+  
+  a = 10
+  b = 20
+  c = a
+  ​
+  print(a is not b)
+  print(a is c)
+  
+  Output
+  True
+  True
+
+7. Membership Operators:
+
+  In Python, in and not in are the membership operators that are used to test whether a value or variable is in a sequence.
+
+  in        -   True if value is found in the sequence
+  not in    -   True if value is not found in the sequence
+  
+  x = 24
+  y = 20
+  list = [10, 20, 30, 40, 50]
+  ​
+  if (x not in list):
+      print("x is NOT present in given list")
+  else:
+      print("x is present in given list")
+
+8. Ternary Operator:
+
+  in Python, Ternary operators also known as conditional expressions are operators that evaluate something based on a condition being true or false. It was added to Python   in version 2.5. 
+
+  It simply allows testing a condition in a single line replacing the multiline if-else, making the code compact.
+  
+  Syntax :  [on_true] if [expression] else [on_false] 
+  
+  a, b = 10, 20
+  min = a if a < b else b
+  ​
+  print(min)
+
+Operator Precedence:
+  Operator precedence describes the order in which operations are performed.
+
+Operator Associativity:
+Operator associativity tells the direction in which an expression is evaluated when multiple operators of the same precedence appear together
+
+  There are two type of associativity:
+  i. Left Associativity
+  ii. Right Associativity
