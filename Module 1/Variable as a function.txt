@@ -1,0 +1,36 @@
+Assign Function to a Variable in Python:
+
+In Python, functions are first-class objects, meaning they can be assigned to variables, passed as arguments and returned from other functions. Assigning a function to a variable enables function calls using the variable name, enhancing reusability.
+
+# defining a function
+def a(): 
+  print("GFG")
+  
+# assigning function to a variable
+var=a
+​
+# calling the variable
+var()
+
+Output
+GFG
+Explanation: a() prints "GFG". It is assigned to var, which now holds a reference to a(). Calling var() executes a().
+
+To assign a function to a variable, use the function name without parentheses (). If parentheses are used, the function executes immediately and assigns its return value to the variable instead of the function itself.
+
+Syntax:
+# Defining a function
+
+def fun():
+
+    # Function body
+
+    pass
+
+# Assigning function to a variable
+
+var = fun
+
+# Calling the function using the variable
+
+var()
