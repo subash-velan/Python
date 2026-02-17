@@ -1,0 +1,36 @@
+Python Variables:
+
+  In Python, variables are used to store data that can be referenced and manipulated during program execution. A variable is essentially a name that is assigned to a values
+
+  1. Unlike other progrmming language, Python variables do not required explicit data type declaration
+  2. The type of variable is inferred based on the value assignment
+
+Example:
+a = 10
+b = "Python"
+print(a)
+print(b)
+
+Output:
+10 #number
+Python #string
+
+Rules for Naming Variables:
+
+To use variables effectively, we must follow Python’s naming rules:
+
+Variable names can only contain letters, digits and underscores (_).
+A variable name cannot start with a digit.
+Variable names are case-sensitive like myVar and myvar are different.
+Avoid using Python keywords like if, else, for as variable names.
+
+Below listed variable names are valid:
+age = 21
+_colour = "lilac"
+total_score = 90
+
+Below listed variables names are invalid:
+1name = "Error"  # Starts with a digit
+class = 10       # 'class' is a reserved keyword
+user-name = "Doe"  # Contains a hyphen
+
