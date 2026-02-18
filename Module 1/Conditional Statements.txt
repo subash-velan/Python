@@ -1,0 +1,86 @@
+Conditional Statements in Python:
+
+  Conditional statements in Python are used to execute a block of code based on specific conditions. These statements controls the flow of a program to execute.
+
+These are the conditional statements in Python:
+
+  1. if..
+  2. if..else..
+  3. if..elif..else
+  4. Nested if statements
+
+1. if statemet:
+   If statement is the simplest form of a conditional statement. It executes a block of code if the given condition is true.
+
+  Syntax:
+
+    if CONDITIONS:
+      #code block
+
+  Short Hand if:
+    age = 19
+    if age > 18: print("Eligible to Vote.")
+
+2. if..else.. :
+
+    If Else allows us to specify a block of code that will execute if the condition(s) associated with an if or elif statement evaluates to False. Else block provides a way to     handle all other cases that don't meet the specified conditions.
+
+    Syntax:
+
+    if CONDITIONS:
+        # code block
+    else:
+        # code block 
+
+  Short Hand if-else:
+    This statement is also know as Ternary Operator
+
+    marks = 45
+    res = "Pass" if marks >= 40 else "Fail"
+    print(f"Result: {res}")
+
+3. elif Statement:
+    elif statement in Python stands for "else if." It allows us to check multiple conditions, providing a way to execute different blocks of code based on which condition       is true. Using elif statements makes our code more readable and efficient by eliminating the need for multiple nested if statements.
+
+    Example:
+
+    age = 25
+    
+    if age <= 12:
+        print("Child.")
+    elif age <= 19:
+        print("Teenager.")
+    elif age <= 35:
+        print("Young adult.")
+    else:
+        print("Adult.")
+
+4. Nested if..else Conditional Statement:
+   Nested if..else means an if-else statement inside another if statement. We can use nested if statements to check conditions within conditions.
+
+    Example:
+    age = 70
+    is_member = True
+    
+    if age >= 60:
+        if is_member:
+            print("30% senior discount!")
+        else:
+            print("20% senior discount.")
+    else:
+        print("Not eligible for a senior discount.")
+
+Match Case Statement:
+  match-case statement is Python's version of a switch-case found in other languages. It allows us to match a variable's value against a set of patterns.
+
+  Example:
+
+  number = 2
+  match number:
+      case 1:
+          print("One")
+      case 2 | 3:
+          print("Two or Three")
+      case _:
+          print("Other number")
+
