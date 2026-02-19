@@ -1,0 +1,25 @@
+Types of Function Arguments:
+
+Python supports various types of arguments that can be passed at the time of function call. In Python, we have the following types of function arguments
+
+    1. Default Arguments
+    2. Positional Arguments
+    3. Keyword Arguments
+    4. Arbitrary Arguments / Variable-Length Arguments
+        i. *args (Non-Keyword Arguments)
+        ii. **kwargs (Keyword Arguments)
+    5. Positional-Only Arguments
+    6. Keyword-Only Arguments
+
+1. Default Arguments:
+   A Default Arguments is paramenter that assumes default value if any value not provided in the function call
+
+   Example:
+   
+    def power(a, b=2):
+        return a ** b
+    
+    power(5)     # Uses default b = 2
+    power(5, 3)  # Overrides default
+
+
