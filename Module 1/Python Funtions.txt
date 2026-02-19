@@ -1,0 +1,29 @@
+Python Functions:
+
+    Python functions are a block of code that does specific tasks. The idea is to put commonly or repeatedly run task together and make a function re-usable (Don't Repeat Yourself)
+
+Define a function:
+
+    Functions or method in Python can define using a keyword is called 'def'. A function might take input in the form of parameter
+
+Syntax:
+
+    def function_name():
+        # block of code
+        return expression
+
+    def function_name(param):
+        # block of code
+        return expression
+
+Nested Functions
+
+Anonymous Functions
+
+
+Return Statement in Function
+
+Pass by Reference and Pass by Value
+
+Recursive Functions
+
