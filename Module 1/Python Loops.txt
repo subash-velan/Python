@@ -1,0 +1,99 @@
+Loops:
+  Loops in Python are used to repeat actions efficiently. There are two types in Python
+  1. For Loop
+  2. While Loop
+
+1. For Loop:
+  For loops is used to iterate over a sequence such as a list, tuple, string or range. It allow to execute a block of code repeatedly, once for each item in the sequence.
+  Example:
+  n = 5
+  for i in range(0,n):
+      print(i)
+
+  li = ["red", "green", "blue"]
+  for x in li:
+      print(x)
+      
+  tup = ("red", "green", "blue")
+  for x in tup:
+      print(x)
+      
+  s = "abc"
+  for x in s:
+      print(x)
+      
+  d = dict({'x':123, 'y':354})
+  for x in d:
+      print("%s  %d" % (x, d[x]))
+      
+  set1 = {10, 30, 20}
+  for x in set1:
+      print(x)
+
+While Loop:
+  In Python, a while loop is used to execute a block of statements repeatedly until a given condition is satisfied. When the condition becomes false, the line immediately after the loop in the program is executed.
+
+In below code, loop runs as long as the condition cnt < 3 is true. It increments the counter by 1 on each iteration and prints "Hello World" three times.
+
+Example:
+  cnt = 0
+  while (cnt < 3):
+      cnt = cnt + 1
+      print("Hello World")
+
+Loop Constrol Statements:
+    Loop control statements in Python are special keywords that change the normal flow of a loop.
+    They let you stop, skip, or add extra behavior to loops.
+    1. break
+    2. continue
+    3. else with loop
+    4. pass
+
+  1. break:
+     Stops the loop immediately, even if the loop condition is still True.
+     Example:
+      for i in range(10):
+          if i == 5:
+            break
+          print(i)
+      The loop exit after execution of 4, while reaching i at 5 would break the loop of execution
+
+  2. continue:
+     Skips the current iteration and moves to the next one.
+     Example:
+      for i in range(10):
+          if i == 5:
+              continue
+          print(i)
+
+    This prints 0–9 except 5.
+
+ 3. else with loop:
+    The else block runs only when the loop finishes normally (no break occurred).
+    Example:
+    for i in range(5):
+        print(i)
+    else:
+        print("Loop finished without break")
+    
+    With break in loop:
+
+      for i in range(5):
+          if i == 3:
+              break
+          print(i)
+      else:
+          print("This will NOT run")
+
+    The else part does not run because break was used.
+
+  4. pass:
+
+     We use pass statement in Python to write empty loops. Pass is also used for empty control statements, functions and classes.
+
+     Example:
+     for letter in 'geeksforgeeks':
+        pass
+     print('Last Letter :', letter)
+    
+
