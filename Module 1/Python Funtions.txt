@@ -16,10 +16,111 @@ Syntax:
         # block of code
         return expression
 
+Types of Functions:
+    1. Built-in Functions
+    2. User-Defined Functions
+    3. Anonymouns Functions (Lambda Functions)
+    4. Recursive Functions
+    5. Generator Functions (yield)
+    6. Async (Coroutine) Functions
+    7. Higher-Order Functions
+    8. Decorator Functions
+    9. Partial Functions
+    10. Methods (Functions inside class)
+        i. Instance Method (self)
+        ii. Class Method (cls)
+        iii. Static Method
+
+    1. Built-In Functions:
+       Built‑in functions in Python are predefined functions available without importing any module. They perform core operations like I/O (print, input), type conversion (int,         str, list), mathematical operations (sum, max, abs), object inspection (type, id, isinstance), and iterable utilities (len, zip, sorted). They are optimized, implemented         mostly in C, and form the foundation of Python’s functionality.
+
+       They are part of the Python Standard Library and are loaded automatically whenever Python starts.
+
+       Python currently provides over 60 built‑in functions like:       
+       print(), len(), type(), input(), sum(), max(), min(), sorted(), int(), float(), str(), map(), filter(), zip(), pow(), open() and more.
+
+    2. User-Defined Functions (UDF)
+       User‑defined functions in Python are functions created using the def keyword to build reusable, modular, and organized code. They can accept parameters, return values,           and improve maintainability. Python supports various types of UDFs such as simple functions, default‑argument functions, variable‑length (*args, **kwargs) functions,             lambda functions, recursive functions, generator functions (yield), and async functions (async def). They help enforce clean code principles and make applications more scalable
+
+    3. Anonymouns Functions (Lambda Functions)
+       In Python, an anonymous function means that a function is without a name. As we already know the def keyword is used to define the normal functions and the lambda keyword        is used to create anonymous functions
+
+       Example 1:
+       def cube(x): return x*x*x   # without lambda
+       cube_l = lambda x: x*x*x  # with lambda
+        
+       print(cube(2))
+       print(cube_l(2))
+
+       Example 2:
+        check = lambda x: "Positive" if x > 0 else "Negative" if x < 0 else "Zero"
+        print(check(5))   
+        print(check(-3))  
+        print(check(0))
+
+    4. Recursive Functions:
+       A recursive function is function that calls itself to sovle the problem. It is commonly used for solving mathematical and dived-and-conquer problems. Always include a base case to avoid infinte recusions
+
+    Example:
+
+    def factorials(n):
+        if n == 1:
+            return 1
+        else:
+            return n * factorial(n-1)
+
+    print(factorials(5))
+
+    5. Generator Functions:
+       
+        A generator function is a special type of function that returns iterator object. Instead of using return to send back a value, generator functions use yield to produce a series of results over time. The function pauses its execution after yield, maintaining its state between iterations. It does lazy evaluation
+
+    Example:
+
+    def func(max):
+        cnt = 1
+        while cnt <= max:
+            yield cnt
+            cnt += 1
+
+    items = func(5)
+    for i in items:
+        print(i)
+
+        Generator Expression:
+        Generator expressions are a concise way to create generators. They are similar to list comprehensions but use parentheses instead of square brackets and are more memory efficient.
+        
+        Syntax:
+        (expression for item in iterable)
+
+        Example:
+        sq = (x*x for x in range(1, 6))
+        for i in sq:
+            print(i)
+
+    6. Async Functions (Coroutine Functions) - async & await:
+       An async function is a function defined with async def that allows Python to perform non‑blocking, concurrent I/O operations. Instead of waiting for slow tasks (like API calls, DB queries, file/network I/O), the function pauses at await and lets the event loop run other tasks in the meantime
+
+    Example:
+    
+    import asyncio
+    
+    async def fetch_data():
+        await asyncio.sleep(1)  # simulates waiting for I/O
+        return "done"
+    
+    async def main():
+        result = await fetch_data()
+        print(result)
+    
+    asyncio.run(main())
+
+    Resource URL : https://www.geeksforgeeks.org/python/python-async/
+        
+
 Nested Functions
 
 Anonymous Functions
-
 
 Return Statement in Function
 
