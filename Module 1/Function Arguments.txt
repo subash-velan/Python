@@ -1,6 +1,8 @@
-Types of Function Arguments:
+Function Arguments:
 
-Python supports various types of arguments that can be passed at the time of function call. In Python, we have the following types of function arguments
+Arguments are the values passed inside the parenthesis of the function. A function can have any number of arguments separated by a comma. There are many types of arguments in Python
+
+Types of Function Arguments:
 
     1. Default Arguments
     2. Positional Arguments
@@ -12,7 +14,7 @@ Python supports various types of arguments that can be passed at the time of fun
     6. Keyword-Only Arguments
 
 1. Default Arguments:
-   A Default Arguments is paramenter that assumes default value if any value not provided in the function call
+   Default Arguments is a parameter that have a predefined value if no value is passed during the function call
 
    Example:
    
@@ -21,5 +23,79 @@ Python supports various types of arguments that can be passed at the time of fun
     
     power(5)     # Uses default b = 2
     power(5, 3)  # Overrides default
+
+2. Positional Arguments:
+   Positional arguments in Python are values that we pass to a function in a specific order. The order in which we pass the arguments matters
+
+   Example:
+    def add(a, b):
+        return a + b
+
+    add(3, 5)   # a=3, b=5
+
+3. Keyword Arguments:
+   Keyword arguments are values passed using the parameters names, not positional when the function call. This lets us provide the arguments in any order, making the code      more readable and flexible.
+
+   Example:
+   
+    def greet(msg, name):
+        print(msg, name)
+    
+    greet(name="Subash", msg="Hello")
+
+4. Arbitrary Arguments:
+   In Python Arbitrary arguments allow us to pass a number of arguments to a function. This is useful when we don't know in advance how many arguments we will need to pass.    There are two types of arbitrary arguments:
+   i. *args (Non-Keyword) : 
+       Used for passing multiple positional arguments
+       Collected into a tuple.
+       
+       Example:
+       def total(*numbers):
+           return sum(numbers)
+        
+       total(1, 2, 3, 4)
+
+    ii. **kwargs (Keyword Arguments):
+        Used for passing multiple keyword arguments.
+        Collected into a dictionary.
+        
+        Example:        
+        def person_info(**details):
+            print(details)
+        
+        person_info(name="Subash", age=30, city="Chennai")
+
+5. Positional-Only Arguments: (Before /)
+   Use / at the end of arguments in the function strongly indicates that functions arguments must be a positional only
+
+    Example:
+    def rectangle_area(length, width, /):
+    return length * width
+
+    print(rectangle_area(10, 20))              # 200
+    print(rectangle_area(width=20, length=10)) # TypeError: rectangle_area() got some positional-only arguments passed as keyword arguments
+
+6. Keyword-Only Arguments: (After *)
+   Use * as the arguments in the function the subsequent params allow only keyword arguments. If uses at the first arguments, strongly indicate it must allow only keyword      arguments.
+
+    Example:
+    def divide(*, a, b):
+        return round(a/b, precision)
+
+    Example:
+    def f(pos1, pos2, /, pos_or_kwd, *, kwd1, kwd2):
+    # pos1 and pos2 are positional-only
+    # pos_or_kwd can be positional or keyword
+    # kwd1 and kwd2 are keyword-only
+    pass
+
+Note:
+
+Parameters before the forward slash /: You must use positional-only arguments
+Parameters after the asterisk * : You must use keyword-only arguments
+Parameters in between / and * : You can use either positional arguments or keyword arguments
+
+
+
 
 
