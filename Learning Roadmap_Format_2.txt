@@ -1,0 +1,64 @@
+https://www.geeksforgeeks.org/python/
+
+Python Fundamentals
+	Python Introduction
+	Input and Output in Python
+	Python Variables
+		1. Global and local Variables
+		2. Assigning function to variable
+		3. Print string format
+	Python Operators
+		1. Arithmetic Operators
+		2. Assignment Operators
+		3. Relational/Comparision Operators
+		4. Logical Operators
+		5. Bitwise Operators
+		6. Membership Operators
+		7. Identity Operators
+	Python Keywords
+	Python Data Types
+		1. Numeric Type
+		2. Sequence Type
+		3. Mapping Type
+		4. Set Type
+		5. Binary Type
+		6. Boolean Type
+		7. None Type
+	Conditional Statements in Python
+	Loops in Python
+	Python Functions
+		1. Built-in Functions
+		2. User-Defined Functions
+		3. Anonymous/Lambda Functions
+		4. Recursive Functions
+		5. Generator Functions
+		6. Decorator Functions
+		7. Higher-Order Functions
+		8. Partial Functions
+		9. Async Functions
+		10. Methods
+			i. Instance Methods
+			ii. Class Methods
+			iii. Static Methods
+
+Python Datastructures
+	Python Strings
+	Python Lists
+	Python Tuples
+	Python Dictionary
+	Python Sets
+	Python Arrays
+
+Advanced Python
+	Python OOP Concepts
+	Python Exception Handling
+	File Handling in Python
+	Python Database
+	Python MongoDB
+	Python MySQL
+	Python Packages
+	Python Modules
+	Python DSA Libraries
+	Python GUI Library and Packages
+	
+	
