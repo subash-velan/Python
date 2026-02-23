@@ -116,15 +116,156 @@ Types of Functions:
     asyncio.run(main())
 
     Resource URL : https://www.geeksforgeeks.org/python/python-async/
+
+    7. Higher-Order Function:
+       A higher-order function is a function that can take other functions as arguments and/or return functions as outputs. These functions allow you to write more concise,        flexible, and abstract code
+
+        Example:
+
+        def apply_to_each(func, iterable):
+            return [func(x) for x in iterable]
         
+        def square(x):
+            return x * x
+        
+        numbers = [1, 2, 3, 4, 5]
+        squared_numbers = apply_to_each(square, numbers)
+        print(squared_numbers) # Output: [1, 4, 9, 16, 25]
 
-Nested Functions
+        There are several higher-order functions in Python that are commonly used, such as map, filter, and reduce
 
-Anonymous Functions
+    Resource URL: https://martinxpn.medium.com/higher-order-functions-in-python-33-100-days-of-python-7bfd66d516d8
 
-Return Statement in Function
+    8. Decorator Function:
 
-Pass by Reference and Pass by Value
+    Resource URL: https://www.geeksforgeeks.org/python/decorators-in-python/
 
-Recursive Functions
+        In Python, decorators are flexible way to modify or extend behavior of functions or methods, without changing their actual code.
 
+        A decorator is essentially a function that takes another function as an argument and returns a new function with enhanced functionality.
+
+        Decorators are often used in scenarios such as logging, authentication and memorization, allowing us to add additional functionality to existing functions or                methods in a clean, reusable way.
+
+        Example: 
+
+        def decorator(func):
+            def wrapper():
+                print("Before calling the functions")
+                func()
+                print("After calling the functions")
+            return wrapper
+
+        @decorator #Applying the decorator to a function
+        def greet():
+            print("Hello!")
+
+        greet()
+
+        Types of Decorators:
+        1. Function Decorators
+        2. Method Decorators
+        3. Class Decorators
+            Example:
+            def fun(cls):
+                cls.class_name = cls.__name__
+                return cls
+            
+            @fun
+            class Person:
+                pass
+            print(Person.class_name)
+
+            Output:
+            Person
+        4. Built-in Decorators (@property, @staticmethod, @classmethod)
+
+    9. Partial Function
+
+       Partial functions in Python is a function that is created by fixing a certain number of arguments of another function. Python provides a built-in module called              functools that includes a function called partial that can be used to create partial functions. The partial function takes a callable (usually another function) and         a series of arguments to be pre-filled in the new partial function
+
+       Example:
+
+       Partial functions support both positional and keyword arguments to be used as fixed arguments.
+
+        from functools import partial
+
+        # A normal function
+        def f(a, b, c, x):
+            return 1000*a + 100*b + 10*c + x
+        
+        # A partial function that calls f with
+        # a as 3, b as 1 and c as 4.
+        g = partial(f, 3, 1, 4)
+        
+        # Calling g()
+        print(g(5))
+
+    10. Methods(inside class):
+
+        A method in Python is simply a function that is defined inside a class and is meant to operate on objects (instances) of that class.
+
+        i. Instance Method:
+            Takes self as the first parameter
+            Can access and modify instance variables
+        
+        ii. Class Method:
+            Uses the decorator @classmethod
+            Takes cls (the class itself) as the first parameter
+            Can access/modify class variables, not instance variables (cls)
+            Often used as factory methods
+
+        iii. Static Method
+            Uses the decorator @staticmethod
+            Takes no automatic first argument (no self, no cls)
+            Behaves like a normal function but lives inside a class for organization or logical grouping
+            Calls by using class name
+
+            Example:
+            
+            class Math:
+                @staticmethod
+                def add(a, b):   # static method
+                    return a + b
+            
+            print(Math.add(3, 5))  # 8
+
+    11. Nested Functions:
+
+        A function defined inside another function is called an inner function (or nested function). It can access variables from the enclosing function’s scope and is often used to keep logic protected and organized.
+
+        Example:
+
+        def f1():
+            s = 'I love GeeksforGeeks'
+            def f2():
+                print(s)
+                
+            f2()
+        f1()
+
+Pass by Reference and Pass by Value:
+
+    In Python, variables are references to objects. When we pass them to a function, the behavior depends on whether the object is mutable (like lists, dictionaries) or         immutable (like integers, strings, tuples).
+
+    Mutable objects: Changes inside the function affect the original object.
+    Immutable objects: The original value remains unchanged.
+
+    Example:
+
+    # Function modifies the first element of list
+    def myFun(x):
+        x[0] = 20
+    
+    lst = [10, 11, 12, 13]
+    myFun(lst)
+    print(lst)   # list is modified
+    
+    # Function tries to modify an integer
+    def myFun2(x):
+        x = 20
+    
+    a = 10
+    myFun2(a)
+    print(a)     # integer is not modified
+
+    Note: Technically, Python uses "pass-by-object-reference". Mutable objects behave like pass by reference, while immutable objects behave like pass by value
