@@ -40,6 +40,15 @@ Python Fundamentals
 			i. Instance Methods
 			ii. Class Methods
 			iii. Static Methods
+	Python Function Arguments
+		1. Default Arguments
+		2. Positional Arguments
+		3. Keyword Arguments
+		4. Arbitrary Arguments
+			i. *args - Non-Keyword Argument
+			ii. **kwars - Keyword Argument
+		5. Positional-Only Arguments
+		6. Keyword-Only Arguments
 
 Python Datastructures
 	Python Strings
