@@ -1,0 +1,95 @@
+Python String:
+  In Python, sequences of characters aligned within a quotes is known as String. It can include numbers,letters,spaces,symbols
+
+  Python does not have any specific type for character
+  A single character is treated as string of length one
+  String are commonly used for text handling and manipulation
+
+Creating a String:
+  String can created using either single quotes ('...') or double quotes (".....").
+  s1 = 'hello'
+  s2 = "hello"
+  s3 = """hello""" # Multiline string
+  s4 = '''hello''' # Multiline string
+
+Multi-line Strings:
+
+  Both variables are valid
+
+  s = """I am Learning
+  Python String on GeeksforGeeks"""
+  print(s)
+  
+  s = '''I'm a 
+  Geek'''
+  print(s)
+
+Accessing characters in String:
+
+  Strings are indexed sequences. Positive indices start at 0 from the left; negative indices start at -1 from the right
+
+String Slicing:
+
+  Slicing is a way to extract a portion of a string by specifying the start and end indexes. The syntax for slicing is string[start:end], where start starting index and end is stopping index (excluded).
+
+  Example:
+  s = "Hello World"
+  print(s[1:4])    # characters from index 1 to 3
+  print(s[:3])     # from start to index 2
+  print(s[3:])     # from index 3 to end
+  print(s[::-1])   # reverse string
+
+String Iteration:
+  Strings are iterable; you can loop through characters one by one.
+  Example:
+  s = "Python"
+  for i in s:
+      print(i)
+
+String Immutability:
+  Strings are immutable, which means that they cannot be changed after they are created. If we need to manipulate strings then we can use methods like concatenation, slicing or formatting to create new strings based on original.
+
+Deleting a String:
+  In Python, it is not possible to delete individual characters from a string since strings are immutable. However, we can delete an entire string variable using the del keyword.
+
+  s = "Python"
+  del s
+
+Updating a String:
+  As strings are immutable, “updates” create new strings using slicing or methods such as replace().
+
+  Example:
+  s = "hello geeks"
+  s1 = "H" + s[1:]                   # update first character
+  s2 = s.replace("geeks", "GeeksforGeeks")  # replace word
+  print(s1)
+  print(s2)
+
+Common String Methods:
+
+  1. len()
+  2. strip()
+  3. upper() and lower()
+  4. replace()
+  5. slice()
+  6. title()
+  7. capitilize()
+  8. startswith()
+  9. endswith()
+  10. casefold()
+  11. split()
+
+
+Slicing with Negative Indices:
+
+  1. slice(start,end,step)
+  2. [start,end,step]
+
+  text[:-8] -> Slices from start to index -8, giving "Geeks".
+  text[-8:-5] -> Slices characters between -8 and -5, giving "for".
+  text[-5:] -> Slices from -5 till the end, giving "Geeks".
+
+
+
+
+
