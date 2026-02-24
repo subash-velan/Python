@@ -1,0 +1,142 @@
+Python Lists:
+  In Python, List is a built-in data structure that can hold ordered collection of items. 
+
+  1. Duplicates : Can contain duplicate items
+  2. Ordered : Maintains the order in which items are added
+  3. Mutable : Items can be modified,replaced,removed
+  4. Index-Based : Items are accessed using thied positions
+  5. DataType : Can store mixed data type
+
+Creating List:
+  Lists can be created in several ways such as using square brackets, list() constructor or by repeating elements.
+
+  1. Square brackets:
+
+    a = [1, 2, 3, 4, 5] # List of integers
+    b = ['apple', 'banana', 'cherry'] # List of strings
+    c = [1, 'hello', 3.14, True] # Mixed data types
+    
+    print(a)
+    print(b)
+    print(c)
+
+  2. list() Constructor:
+
+    a = list((1, 2, 3, 'apple', 4.5))  
+    print(a)
+    
+    b = list("GFG")
+    print(b)
+
+  3. By Repeated elements:
+
+    a = [2] * 5
+    b = [0] * 7
+    
+    print(a)
+    print(b)
+
+List Operations:
+
+  Concatenation:
+  lst1 + lst2
+
+  Repetition:
+  [1,2,3] * 2  #[1,2,3,1,2,3,1,2,3]
+
+  Membership:
+  3 in [1,2,3,4,5] #True
+
+Accessing List Elements:
+
+  Elements in lists are accessed by using indexing. Python indexes starts at 0. Negative indexes are allow to access from end of the elements
+
+  Example:
+
+    a = [10, 20, 30, 40, 50]
+
+    #By Indexing
+    print(a[0])  # picks 1st element
+    print(a[-1]) # picks last element
+
+    #By Slicing
+    print(a[1:4])   # elements from index 1 to 3, excludes end
+    print(a[::-1])  # reversed list
+
+List Methods:
+  1. Adding Elements:
+      append() : Adds an element at the end of the list
+      extend() : Adds multiple elements or list at the end of the list
+      insert()  : Adds an element at the specific position
+
+      Example:
+      lst.append(10)       # add at end
+      lst.insert(1, 50)    # add at index, usage: insert(position, element)
+      lst.extend([4, 5])   # add multiple items
+
+  2. Removing Elements:
+      remove() : Removes the first occurrence of an element
+      pop() : Removes the element at a specific index or last element if no index is specified
+      del keyword : Deletes an element at a specified index
+      clear() : Removes all items from the list
+
+      Example:
+
+      lst = [10, 20, 30, 40, 50]
+      lst.remove(10)     # removes first occurrence of passing element, here 10
+      lst.pop()          # removes last item
+      lst.pop(2)         # removes at index
+      del lst[1]         # delete item
+      lst.clear()        # remove all items, result: empty list
+
+  3. Updating Elements:
+      Since List are mutable, by using index lists are updating
+
+      Example:
+      a = [10, 20, 30, 40, 50]
+      a[1] = 25 
+      print(a) # [10, 25, 20, 30, 40, 50]
+
+  4. Searching Elements:
+      index() : gets the position of an element
+      count() : count the occurrences
+
+  5. Sorting Elements:
+      lst.sort()           # ascending
+      lst.sort(reverse=True) # descending
+      lst.reverse() #descending
+
+
+Iterating Over Lists:
+  Using loops, can iterate over the list elements
+  
+  Example:
+  a = ['apple', 'banana', 'cherry']
+  for item in a:
+      print(item)
+
+Nested Lists:
+
+  List within a list is know as nested list, which is useful for representing matrices or tables
+  Using chaining indexes to access the elements from nested list
+
+  Example:
+  matrix = [ [1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9] ]
+  print(matrix[1][2])
+
+List Comprehensions:
+
+    squares = [x*x for x in range(10)]
+
+    With Condition:
+    even = [x for x in range(10) if x % 2 == 0]
+  
+
+
+
+
+
+
+
