@@ -1,0 +1,16 @@
+What is OOP?
+  Object-Oriented Programming (OOP) is a programming paradigm that structures or organizes the programming/code around objects -- entities that bundles data (attributes) and behaviour (methods). Python supports complete OOP concepts, enabling you to model real-world concepts using classes and objects. The following are four pillars in OOP;
+
+Encapsulation:
+    Encapsulation allows you to create bundle data (attributes) and behaviours (methods) within a class to create cohesive unit. By defining methods to control access to attributes and its modification. Encapsulation helps to data integrity and promotes modular, secure code.
+
+Inheritance:
+    Inheritance enables the creation of hierarchical relationships between classes. A class (subclass or derived class) which inherits the methods and properties from another class (parent class or super class). This promotes the code reuse and reduce the duplication
+
+
+Polymorphism:
+
+
+
+
+Abstraction:
