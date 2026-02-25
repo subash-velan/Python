@@ -1,0 +1,69 @@
+Python Tuple:
+  In Python, Tuple is built-in data structure it can hold ordered collection of elements. It behaves like read-only lists
+
+    1. Duplicates : Allow duplicate items to store
+    2. Ordered : Elements keep their order
+    3. Immutable : Items can't be modified once created
+    4. DataType : Allow mixed data type
+    5. Index-Based : Items are accessed using thied positions
+
+Creating Tuple:
+  A tuple is created by placing all the items inside parentheses (), separated by commas. A tuple can have any number of items and they can be of different data types.
+  tup = ()
+  print(tup)
+  
+  # Using String
+  tup = ('Hello', 'World')
+  print(tup)
+  
+  # Using List
+  li = [1, 2, 4, 5, 6]
+  print(tuple(li))
+  
+  # Using Built-in Function
+  tup = tuple('Hello')
+  print(tup)
+
+  # Using commas
+  tup = 'Hello','World'
+  print(tup)
+
+Tuple Operations:
+  Accessing elements:
+  Example:
+    t = ("a", "b", "c")
+    print(t[0])
+
+  Slicing:
+  Example:
+    t = (10, 20, 30, 40)
+    print(t[1:3])
+
+Deleting a Tuple:
+  Since tuples are immutable, we cannot delete individual elements of a tuple. However, we can delete an entire tuple using del statement. 
+  Printing of Tuple after deletion results in an Error.
+
+  Example:
+  tup = (0, 1, 2, 3, 4)
+  del tup
+  
+  print(tup)
+
+Tuple Unpacking with Asterisk (*):
+
+  In Python, the " * " operator can be used in tuple unpacking to grab multiple items into a list. This is useful when you want to extract just a few specific elements and collect the rest together.
+
+  Example:
+  tup = (1, 2, 3, 4, 5)
+
+  a, *b, c = tup
+  
+  print(a) 
+  print(b) 
+  print(c)
+
+  a gets the first item.
+  c gets the last item.
+  *b collects everything in between into a list.
+
+
