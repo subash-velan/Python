@@ -1,0 +1,100 @@
+Python Sets:
+  In Python, Sets are built-in data structure that stores unordered collection of data
+
+  1. Duplicates : Do not contain any duplicates, duplicates are automatically removed
+  2. Un-Ordered : Un-ordered collection of data
+  3. Mutable : Items can be add/remove
+  4. Index-Based : Not index based
+  5. DataType : Set elements must be hashable    
+      Valid: int, float, string, tuple
+      Invalid: list, dict, set
+
+Creating Set:
+  Using {}:
+    s = {1,2,3,4,5}
+
+  Using set():
+    s = set([1,2,3,4,5])
+
+  set() class:
+    s = {} # its a dictionary
+    s = set() # it is right way to create
+
+  Adding Elements:
+      add() : adds a single item
+      update() : adds multiple elements
+
+      Example:
+      s.add(50)
+      s.update([60, 70, 80])
+
+  Removing Elements:
+      remove() : Removes specified elements from the set, it raise KeyError if not exist
+      discard() : It is used to safer removing of an element, even element not available in the set
+      pop() : Removes and returns an arbitrary element from the set, throws error if set is empty
+      clear() : removes all elements from the set
+
+      s.remove(20)
+      s.discard(20)
+      s.pop()
+      s.clear()
+
+Minimum and Maximum of Sets - min() and max():
+
+  s1 = {4, 12, 10, 9, 4, 13}
+  print(min(s1))      
+  print(max(s1))
+
+Set Operations:
+  Python sets provides all standard mathematical operations such as UNION, INTERSECTION, DIFFERENCE and SYMMETRIC DIFFERENCE
+  UNION : The union of two sets combines all unique elements from both sets.
+    c = a | b
+    c = a.union(b)
+  
+  INTERSECTION: The intersection of two sets includes only the common elements present in both sets
+    c = a & b
+    c = a.intersection(b)
+
+  DIFFERENCE: The difference between two sets includes elements present in the first set but not in the second.
+    set3 = set1 - set2  # Using the '-' operator
+    set3 = set1.difference(set2)  # Using the difference() method
+
+    Example:
+      A = {1, 2, 3, 4}
+      B = {3, 4, 5, 6}
+      
+      # Using '-' operator
+      res1 = A - B
+      print("using '-':", res1)
+      
+      # Using difference() method
+      res2 = A.difference(B)
+      print("using difference():", res2)
+
+  SYMMETRIC DIFFERENCE:
+    
+    set3 = set1 ^ set2  # Using the '^' operator
+    set3 = set1.symmetric_difference(set2)  # Using the symmetric_difference() method
+  
+    Example:
+      A = {1, 2, 3, 4}
+      B = {3, 4, 5, 6}
+      
+      # Using '^' operator
+      res1 = A ^ B
+      print("using '^':", res1)
+      
+      # Using symmetric_difference() method
+      res2 = A.symmetric_difference(B)
+      print("using symmetric_difference():", res2)
+
+Frozen Sets:
+  It is built-in data type that is similar to sets but it is immutable
+  Once frozenset is created, we cannot add or remove
+  A frozenset cannot contain duplicate elements
+
+  # Creating a frozenset from a list
+  fset = frozenset([1, 2, 3, 4, 5])
+  print(fset)
+
+
