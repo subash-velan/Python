@@ -1,0 +1,74 @@
+Python Dictionary:
+  A Python dictionary is a data structure that stores data in key-value pairs, where each key is unique and is used to retrieve its associated value. It is mainly used when you want to store and access data by a name (key) instead of by position like in a list
+
+    1. Duplicates : Keys are unique, not allowing duplicates. If you repeat a key, the last value overwrites the earlier one
+    2. Ordered : Python 3.6+, Maintains the insertion order, before it was unordered
+    3. Mutable : Items can be modified,replaced,removed
+    4. Key-Based : Items are accessed using their unique keys, not indexes
+    5. DataType : Can store mixed data type
+
+Creating a Dictionary:
+  Method 1: Using {}
+    d = {"a": 1, "b": 2}
+  Method 2: Using dict()
+    d = dict(a=1, b=2)
+  Method 3: Empty dictionary
+    d = {}
+
+Accessing Elements:
+  Using Key:
+    d["a"] or d['a']
+    
+  Using .get() [safer and avoid error]:
+    d.get('a')
+    d.get('x','Not Found')
+
+Modifying a Dictionary:
+  Add or Update:
+    d['a'] = 5
+    d['c'] = 3
+
+  Removing a Dictionary:
+    del : Removes an item using its key
+    pop() : Removes an item with given key and returns its value
+    clear() : Removes all items from the dictionary
+    popitem() : Removes and return the last inserted key-value pair
+
+    d = {1: 'Geeks', 2: 'For', 3: 'Geeks', 'age':22}
+
+    # Using del 
+    del d["age"]
+    print(d)
+    
+    # Using pop() 
+    val = d.pop(1)
+    print(val)
+    
+    # Using popitem()
+    key, val = d.popitem()
+    print(f"Key: {key}, Value: {val}")
+    
+    # Using clear()
+    d.clear()
+    print(d)
+
+    Output:
+    {1: 'Geeks', 2: 'For', 3: 'Geeks'}
+    Geeks
+    Key: 3, Value: Geeks
+    {}
+
+  Dictionary Methods:
+
+    d.keys()   : Returns all keys from the dict
+    d.values() : Returns all values from the dict
+    d.items()  : Returns all key-value pairs
+
+Iterating Dictionary:
+
+    for key,val in d.items():
+      print(key, val)
+
+    #Iterate over keys
+    for key in d:
+      print(key)
