@@ -5,12 +5,11 @@ Encapsulation:
     Encapsulation allows you to create bundle data (attributes) and behaviours (methods) within a class to create cohesive unit. By defining methods to control access to attributes and its modification. Encapsulation helps to data integrity and promotes modular, secure code.
 
 Inheritance:
-    Inheritance enables the creation of hierarchical relationships between classes. A class (subclass or derived class) which inherits the methods and properties from another class (parent class or super class). This promotes the code reuse and reduce the duplication
-
+    Inheritance enables the creation of hierarchical relationships between classes. A class (subclass or derived class) to acquire the methods and properties of another class (parent class or super class). This promotes the code reuse and reduce the duplication
 
 Polymorphism:
-
-
-
+    Polymorphism is one of the core concept of OOP, it allows a single function, methods or operator behaves differently based on the type of class of object it is working upon
+    Poly-Morphism means "Many" "forms" derived from Greek word
 
 Abstraction:
+    Data abstraction is focus on hiding the implementation details and exposing only the essential features or functionality of an object
