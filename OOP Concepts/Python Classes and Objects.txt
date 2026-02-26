@@ -1,0 +1,65 @@
+Classes and Objects:
+  What is class?
+      A class is a blueprint or template for creation of object. It defines the attributes and methods
+  
+  What is object?
+      An Object is a specific instances of a class. 
+  
+  
+  Creating Class:
+      A class is created by using a class keyword
+      
+      class Car:
+        def __init__(self):
+          pass
+  
+      obj1 = Car() #creating object for a class
+      obj2 = Car() #create multiple object for the same class
+
+Constructor:
+__init__():
+
+    The __init__ method acts as a constructor in Python and is automatically executed when the object is created
+    It is used to create and initialize the attributes of an object with the values provided at the time of object creation
+
+Types of Variables:
+    There are two types of variables inside a class
+    1. Class Variables
+    2. Instance Variables
+
+  1. Class Variable:
+    These are variables defined at class level outsider of any methods, which is shared accross all instances of a class
+    All objects of class share the same value of a class variable unless explicitly override an object
+
+  2. Instance Variable:
+    Variables that are unique to each instance (object) of a class. 
+    These are defined within __init__() method or other instance methods. Each object maintains its own copy of instance variables, independent of other objects
+
+    class Dog:
+      # Class variable
+      species = "Canine"
+  
+      def __init__(self, name, age):
+          # Instance variables
+          self.name = name
+          self.age = age
+  
+    # Create objects
+    dog1 = Dog("Buddy", 3)
+    dog2 = Dog("Charlie", 5)
+    
+    # Access class and instance variables
+    print(dog1.species)  # (Class variable)
+    print(dog1.name)     # (Instance variable)
+    print(dog2.name)     # (Instance variable)
+    
+    # Modify instance variables
+    dog1.name = "Max"
+    print(dog1.name)     # (Updated instance variable)
+    
+    # Modify class variable
+    Dog.species = "Feline"
+    print(dog1.species)  # (Updated class variable)
+    print(dog2.species)
+    
+  
