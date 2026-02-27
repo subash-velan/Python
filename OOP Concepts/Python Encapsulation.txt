@@ -68,4 +68,37 @@ Declaring Protected and Private Methods:
     Use a single underscore (_) before a method name to indicate it is protected meant to be used within class or its subclasses.
     Use a double underscore (__) to define a private method accessible only within class due to name mangling.
 
+@property (getter and setter):
+    Property decorator is used to define a method as attributes (it can be accessed like attributes). Adds additional logic when read, write or delete these attributes
+    Example:
+        class Rectangle:
+            def __init__(self,width,height):
+                self._width = width
+                self._height = height
+            
+            @property
+            def width(self):
+                return f"Width:{self._width:.2f}"
+        
+            @property
+            def height(self):
+                return f"Height:{self._height:.2f}"
+        
+            @width.setter
+            def width(self, new_value):
+                if new_value > 0:
+                    self._width = new_value
+                else:
+                    print("Entered value is less than zero")
+            
+            @height.setter
+            def height(self, new_value):
+                if new_value > 0:
+                    self._height = new_value
+                else:
+                    print("Entered value is less than zero")
+        
+        rect = Rectangle(5,3)
+        print(rect.height)
+        print(rect.width)
 
