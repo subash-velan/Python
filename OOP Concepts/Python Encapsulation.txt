@@ -1,0 +1,71 @@
+Python Encapsulation:
+    Encapsulation that involves to bundling data (attributes) and methods together within a single unit called class. By defining methods to controlling the access of these data and methods
+
+Access Specifiers / Access Modifiers:
+    There are three ways to protect data such as;
+    1. Public
+    2. Protected
+    3. Private
+    4. And additional special type in Python is @property
+
+1. Public Members:
+    Public members are variables or methods that can be accessed from anywhere inside the class, outside the class or another module. By default, all members in Python are public
+    Its normal and no need a special symbol for define
+
+    Example:
+        class Employee:
+            def __init__(self, name):
+                self.name = name   #Public members
+
+            def print_name(self):  #Public Methods
+                print(self.name)
+
+        emp = Employee("Subash")
+        emp.print_name()  #Accessible
+        print(emp.name)   #Accessible
+
+2. Protected Members:
+    Protected members are variables or methods that are intended to be accessible within the class and its child class. They are not strictly private but treated as internal.
+
+    Example:
+    class Employee:
+        def __init__(self, name, age):
+            self.name = name  #Public
+            self._age = age    #Protected
+
+    class Display(Employee):
+        def display_age(self):  
+            print(self._age)    #Accessible in sub-class
+
+    emp = Employee("Subash",30)    
+    print(emp.name)             #Public accessible
+    emp.display_age()           #Protected accessible via sub-class
+
+3. Private Members:
+    Private members are variables or methods that can't directly accessible from outside of the class. They are used to restrict access and protect internal data.
+    In Python, private members are defined with double underscores as prefix (e.g. self.__salary).
+    Python applies name mangling by intenally renaming (_ClassName__salary) them to prevent direct access
+
+    Example:
+    class Employee:
+        def __init__(self, name, salary):
+            self.name = name        #Public variables
+            self.__salary = salary  #Private variables
+
+    class Display(Employee):
+        def display_salary(self):
+            print(self.__salary)    
+
+    emp = Employee("Subash",60000)
+    print(emp.name)                #Public accessible
+    emp.Diplay()                   #Private members accessing correct way
+    print(emp.__salary)            #throws an error, private members can't access directly
+
+Declaring Protected and Private Methods:
+
+    In Python, you can control method access levels using naming conventions:
+    
+    Use a single underscore (_) before a method name to indicate it is protected meant to be used within class or its subclasses.
+    Use a double underscore (__) to define a private method accessible only within class due to name mangling.
+
+
