@@ -2,7 +2,7 @@ ROADMAP FOR OOP in Python:
     1. Classes and Object
     2. Class Variables and Instance Variables
     3. Encapsulation
-    4. Inheritance
+    4. Inheritance & super()
     5. Polymorphism
     6. Abstraction
     7. Special (dunder) Methods
@@ -14,7 +14,7 @@ ROADMAP FOR OOP in Python:
         __enter__, __exit__
         __call__
     8. Instance vs Class vs Static methods (Methods Type)
-    9. MRO (Method Resolution Order) &  & super()
+    9. MRO (Method Resolution Order)
     10. Descriptors
     11. Metaclasses
     12. OOP Design Principles - Design Patterns & SOLID
