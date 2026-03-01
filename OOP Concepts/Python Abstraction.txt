@@ -1,0 +1,3 @@
+Python Abstraction:
+    Data abstraction means showing only the essential features and hiding the complex internal details. Technically, in Python abstraction is used to hide the implementation details from the user and expose only the necessary features, making the code simpler and easier to interact with.
+
