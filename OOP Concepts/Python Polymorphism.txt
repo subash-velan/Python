@@ -1,0 +1,89 @@
+Python Polymorphism:
+  Polymorphism means "many-forms".
+  In Python, it allows the same function, methods or operators to behave differently depending on the type of object it is working with.
+
+  There are four types of polymorphism:
+  1. Operator Polymorphism
+  2. Function Polymorphism
+  3. Method Overriding
+  4. Method Overloading
+
+1. Operator Polymorphism:
+  Operator Polymorphism means the same Operator allows to perform different operations depending on the type of operands
+
+  Example:
+  + - It does addition, if the operands are numbers, it will concatenate when the operands are string
+  * - It does multiplication at the same time it does replication of string
+
+  print(1 + 2)
+  print("Hello " + "World")
+  print(2*2)
+  print("Hello " *2)
+
+2. Function Polymorphism:
+  Function polymorphism means the same built-in function can operate on different types of objects and produce results appropriate to those types
+
+  Example:
+  print(len("Python")) # Length of string → 6 
+  print(len([1,2,3,4])) # Length of list → 4 
+  print(len({1:"a",2:"b"}))# Length of dictionary → 2
+
+3. Method Overriding:
+
+    Runtime polymorphism means that the behavior of a method is decided while the program is running, based on the object calling it.
+
+    In Python, this happens through Method Overriding a child class provides its own version of a method already defined in the parent class. Since Python is dynamic, it supports this,         allowing same method call to behave differently for different object types.
+
+    Example:
+    class Animal:
+        def sound(self):
+            return "Some generic sound"
+
+    class Dog(Animal):
+        def sound(self):
+            return "Bark"
+    
+    class Cat(Animal):
+        def sound(self):
+            return "Meow"
+    
+    # Polymorphic behavior
+    animals = [Dog(), Cat(), Animal()]
+    for animal in animals:
+        print(animal.sound())
+
+4. Method Overloading:
+  Python does not support method overloading by default. If you define multiple methods with the same name, only the latest definition will be used.
+  It mimicked and applied method overloading in python
+  
+  Example:
+
+  return a + b + c obj = Demo() 
+  print(obj.add(2)) # 2 
+  print(obj.add(2,3)) # 5 
+  print(obj.add(2,3,4)) # 9
+
+  By using Multiple Dispatch:
+    Python's multipledispatch library allows true method overloading by dispatching functions based on parameter types and counts
+
+    Example:
+    from multipledispatch import dispatch
+    
+    @dispatch(int, int)
+    def product(first, second):
+        result = first * second
+        print(result)
+    
+    @dispatch(int, int, int)
+    def product(first, second, third):
+        result = first * second * third
+        print(result)
+    
+    @dispatch(float, float, float)
+    def product(first, second, third):
+        result = first * second * third
+        print(result)
+    
+    product(2, 3)
+    product(2, 3, 2)
+    product(2.2, 3.4, 2.3)
