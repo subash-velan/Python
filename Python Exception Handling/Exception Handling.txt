@@ -1,0 +1,56 @@
+Python Exception Handling:
+    Python Exception Handling allows a program to gracefully handle unexpected events (like invalid input or missing files) without crashing. Instead of terminating abruptly, Python lets you detect the problem, respond to it, and continue execution when possible
+
+Example:
+
+try:
+  n = 5
+  result = n / 0
+except ZeroDivisionError:
+  print("There is error occurs in division")
+
+Errors Vs Exceptions:
+
+  Errors:   
+    An error is a problem in a program that cannot be handled or recover during program execution. Errors usually occur due to issues outside the program or due to serious        flaws in code
+
+  Common Types:
+    Syntax Error
+    Runtime Error
+    Logical Error
+
+  Exception:
+    An exception is a problem that occurs during program execution but can handle using code. Exception let the program continue running instead of crashing
+
+Syntax and Usage:
+
+  try:
+    #code
+  except:
+    #code
+  else:
+    #code
+  finally:
+    #code
+  
+  try:    Runs the risky code that might cause an error
+  except: Catches and handles the error if occurs in try block
+  else:   Executes only if no exception occurs in try block
+  finally:Runs regardless of what happens useful for clean up tasks like closing files or newtwork connections
+
+Custom Exceptions:
+    Python allows to create own or custom exception class inherited from Exception class to handle application specific errors
+
+    Example:
+    class AgeError(Exception):
+      pass
+
+    def set(age):
+        if age < 0:
+            raise AgeError("Age cannot be negative.")
+        print(f"Age set to {age}")
+    
+    try:
+        set(-5)
+    except AgeError as e:
+        print(e)
