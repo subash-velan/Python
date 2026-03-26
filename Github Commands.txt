@@ -1,0 +1,59 @@
+Git-bash commands
+====================
+1. Move to your local dev path
+
+	$cd c:/path/
+
+2. Iniate git in local path
+
+	$git init
+	
+3. Add remote repository
+
+	$git remote add origin https://mobius-gitlab.bt.com/app22071/esg-octopus-fleetdata.git
+	
+	clone Repository ==> $git clone https://mobius-gitlab.bt.com/app22071/esg-octopus-fleetdata.git
+	
+4. Fetch origin
+
+	$git fetch origin
+	
+5. Checkout your branch
+
+	$git checkout -b <repo_branch_name> origin/<repo_branch_name>
+	
+6. Add your affected file to push
+
+	$git add . ==> this command for all files
+	$git add requirements.txt ==> this command for specific file
+	
+7. Commit your changes
+
+	$git commit -m "Your messages"
+	
+8. Push your code to remote repository
+
+	$git push origin <branch_name>
+	
+9. Git clone
+
+	$git clone <repo_url>
+	
+		or
+	$git clone --depth=1 <repo_url> ===> using for larger file repository
+	
+10. Checkout one branch to another branch
+
+	$git checkout -b esg-octopus-backend-branch-dev-subash esg-octopus-fleetdata-branch-dev
+	
+	==> move code from esg-octopus-fleetdata-branch-dev to esg-octopus-backend-branch-dev-subash
+
+
+-------------------------------------
+
+
+# Step 1: Switch to your branch
+$git checkout esg-octopus-fleetdata-branch-dev-subash
+
+# Step 2: Merge changes from dev
+$git merge origin/esg-octopus-fleetdata-branch-dev
