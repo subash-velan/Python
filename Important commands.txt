@@ -13,7 +13,7 @@
 	Unix/MacOS :  $ python3 -m pip install "package name"
 
 4. Python requirements.txt package installation:
-	Common     :  $ pip install -r requirements.txt
+	Common     :  $ pip install -r requirements.txt (or) $ pip install -r folder/requirements.txt
 	Windows    :  $ python -m pip install -r requirements.txt
 	Unix/MacOS :  $ python3 -m pip install -r requirements.txt
 
